@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css" media="screen">
+body {
+	padding: 40px;
+}
+</style>
+<body>
+	<h2>Flux Tower</h2>
+	<p>Click and drag with your mouse to predict what the data will do. Data will populate following your visual hypothesis. The mean of all other submitted hypotheses will be shown in red.</p>
+   <br>
+    <h3>CO2 Data</h3>
+      <div id="theChartCO2"></div>
+      <input type="button" value="Reset graph" onClick="window.location.reload()">
+    <br>
+    <br>
+    Next Chart ==> <a href="ch4.html">CH4 Data</a>
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDUk38qzgV0lK_IMiPpgvKQepenC2KG4gE",
+    authDomain: "vueproject-1b7f1.firebaseapp.com",
+    databaseURL: "https://vueproject-1b7f1.firebaseio.com",
+    projectId: "vueproject-1b7f1",
+    storageBucket: "vueproject-1b7f1.appspot.com",
+    messagingSenderId: "643425585063"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src='d3v4.js'></script>
+<script src='_scriptCO2data.js'></script>
